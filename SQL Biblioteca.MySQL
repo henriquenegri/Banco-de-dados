@@ -57,4 +57,5 @@ num_endere integer,
 des_bairro varchar (80),
 des_cidade varchar(80),
 des_sigla_estado char(2),
-des_cod_cep varchar (10));
+des_cod_cep varchar (10)
+foreign key (cod_usu) references usuario (cod_usu));
