@@ -1,0 +1,51 @@
+create database FORNEC;
+
+create table fornecedor
+(cod_forn int primary key,
+nom_forn varchar (10),
+sta_forn int,
+qtd_peca int,
+des_cidade_forn varchar(80));
+
+insert into fornecedor(cod_forn, nom_forn, sta_forn, qtd_peca, des_cidade_forn)
+			   values ('1','Smith','20','2000','Londres'),
+					  ('2','Jones','10','1000','Paris'),
+					  ('3','Blake','30','3000','Paris'),
+                      ('4','Clark','20','2500','Londres'),
+                      ('5','Adams','30','1000','Atenas'),
+                      ('6','Ivete','40','1000','Nova York'),
+                      ('7','Mariana','70','2500','Tóquio'),
+                      ('8','Zita','50','1000','São Paulo'),
+                      ('9','Anna','60','1500','Paris'),
+                      ('10','Fausto','40','2000','São Paulo');
+	
+select *
+from fornecedor;
+
+select nom_forn, des_cidade_forn
+from fornecedor
+where des_cidade_forn = 'Paris';
+
+select nom_forn, qtd_peca
+from fornecedor
+where qtd_peca >= 1000;
+
+select nom_forn, sta_forn, qtd_peca
+from fornecedor
+where qtd_peca <= 1500;
+
+select nom_forn, des_cidade_forn, qtd_peca
+from fornecedor
+where qtd_peca = 1000;
+
+select nom_forn, sta_forn, des_cidade_forn
+from fornecedor
+where sta_forn < 30;
+
+select nom_forn, sta_forn, qtd_peca
+from fornecedor
+where  qtd_peca <> 1000;
+
+select *
+from fornecedor
+where des_cidade_forn <> 'São Paulo';
